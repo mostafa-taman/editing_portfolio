@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import LanguageProvider from "@/providers/LanguageProvider";
 import type { Metadata } from "next";
+import NavBar from "@/components/common/navbar";
 import NextThemeProvider from "@/providers/NextThemeProvider";
 
 const geistSans = Geist({
@@ -27,7 +28,10 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <LanguageProvider>
           <NextThemeProvider>
-            {children}
+            <main className="w-full">
+              <NavBar />
+              {children}
+            </main>
           </NextThemeProvider>
         </LanguageProvider>
       </body>

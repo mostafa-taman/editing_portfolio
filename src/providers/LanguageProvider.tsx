@@ -1,5 +1,7 @@
 "use client";
 
+import "@/i18n/config";
+
 import { useTranslation } from "react-i18next";
 
 type LanguageProviderProps = {

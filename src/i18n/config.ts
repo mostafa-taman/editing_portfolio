@@ -10,8 +10,18 @@ i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
-        resources: { en, ar, fr, es },
+        resources: {
+            en: { translation: en },
+            ar: { translation: ar },
+            fr: { translation: fr },
+            es: { translation: es },
+        },
         fallbackLng: "en",
+        detection: {
+            order: ["querystring", "cookie", "localStorage", "navigator", "htmlTag"],
+            caches: ["cookie", "localStorage"],
+        },
+        debug: true,
         interpolation: {
             escapeValue: false
         }
