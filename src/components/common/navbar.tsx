@@ -58,9 +58,9 @@ const NavBar: React.FC<React.HTMLAttributes<HTMLElement>> = () => {
 
                     <div className={`gap-5 md:absolute md:flex md:items-center md:justify-end md:inset-y-0 ${isArabic ? "md:left-0" : "md:right-0"}`}>
                         <div className="hidden md:flex md:flex-row gap-2">
-                            <Button className="rounded-full cursor-pointer" variant="outline" size={"icon"}>
+                            {/* <Button className="rounded-full cursor-pointer" variant="outline" size={"icon"}>
                                 <icons.DownloadIcon />
-                            </Button>
+                            </Button> */}
 
                             <ThemeTogglerButton />
                         </div>
@@ -76,9 +76,9 @@ const NavBar: React.FC<React.HTMLAttributes<HTMLElement>> = () => {
 
 
                             <DropdownMenuContent align="center" className="grid grid-cols-1 px-1 items-center justify-center gap-1 rounded-lg mt-2">
-                                <Button className="rounded-full cursor-pointer" variant="outline" size={"default"}>
+                                {/* <Button className="rounded-full cursor-pointer" variant="outline" size={"default"}>
                                     <icons.DownloadIcon />
-                                </Button>
+                                </Button> */}
 
                                 <ThemeTogglerButton size="default" />
                             </DropdownMenuContent>

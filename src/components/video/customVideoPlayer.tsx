@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const btnBase =
-    "w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-neutral-700 transition";
+    "w-8 h-8 flex items-center justify-center rounded-full hover:bg-neutral-700 transition";
 
 interface CustomVideoPlayerProps {
     url: string;
@@ -190,12 +190,12 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({
                         aria-label={playing ? "Pause" : "Play"}
                     >
                         {playing ? (
-                            <svg width="24" height="24" fill="currentColor">
+                            <svg width="24" height="24" fill="white">
                                 <rect x="6" y="5" width="4" height="14" rx="1" />
                                 <rect x="14" y="5" width="4" height="14" rx="1" />
                             </svg>
                         ) : (
-                            <svg width="24" height="24" fill="currentColor">
+                            <svg width="24" height="24" fill="white">
                                 <polygon points="6,4 20,12 6,20" />
                             </svg>
                         )}
@@ -207,13 +207,13 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({
                         aria-label={muted ? "Unmute" : "Mute"}
                     >
                         {muted || volume === 0 ? (
-                            <svg width="24" height="24" fill="currentColor">
+                            <svg width="24" height="24" fill="white">
                                 <path d="M6 9v6h4l5 5V4l-5 5H6z" />
-                                <line x1="23" y1="9" x2="17" y2="15" stroke="currentColor" strokeWidth="2" />
-                                <line x1="17" y1="9" x2="23" y2="15" stroke="currentColor" strokeWidth="2" />
+                                <line x1="23" y1="9" x2="17" y2="15" stroke="white" strokeWidth="2" />
+                                <line x1="17" y1="9" x2="23" y2="15" stroke="white" strokeWidth="2" />
                             </svg>
                         ) : (
-                            <svg width="24" height="24" fill="currentColor">
+                            <svg width="24" height="24" fill="white">
                                 <path d="M6 9v6h4l5 5V4l-5 5H6z" />
                             </svg>
                         )}
