@@ -17,6 +17,14 @@ export const en = {
             cta: "check My Projects"
         },
         hireMeMessage: "Let's work together! I am available for freelance work. Reach out through your preferred platform",
+        showReel: {
+            title: "Showreel",
+            description: "A curated selection of my best work, showcasing my skills in video editing and storytelling.",
+            videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1748492545/Portfolio%20Porjects/Showreel.mp4",
+            thumbnail: "/thumbnails/Show Reel Thumbnail.png",
+            type: "cloudinary",
+            vertical: false
+        }
     },
     about: {
         title: "About Me",
@@ -54,27 +62,50 @@ export const en = {
             {
                 title: "Color Language",
                 description: "A visual exploration of color theory and its impact on storytelling. Showcasing my understading of color theory and color grading.",
-                videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1748491759/Portfolio%20Porjects/Color%20Language.mp4",
+                thumbnail: "/thumbnails/Color Language Thumbnail.png",
+                type: "cloudinary",
+                vertical: false
             },
             {
                 title: "(Fake) Thunder AD",
                 description: "A creative advertisement for a fictional product, showcasing my skills in commercial video editing. I challenged myself by using only free stock footage and designing the logo myself. ",
-                videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1748475921/Portfolio%20Porjects/Thunder%20AD.mp4",
+                thumbnail: "/thumbnails/Thunder AD Thumbnail.png",
+                type: "cloudinary",
+                vertical: false
             },
             {
                 title: "(Fan Made) Best Ever Food Review Ramen Trailer",
-                description: "A fan-made trailer for a popular YouTube series, demonstrating my ability to create engaging promotional content. I used the original footage and added my own twist to it.",
-                videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                description: "A fan-made trailer for the popular YouTube channel Best ever food review show, their content is alreadt enganging and entertaining on its own but I manage to compress one of their video to a minute long trailer. I used the original footage and added my own twist to it.",
+                videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1748475963/Portfolio%20Porjects/Ramen%20Trailer.mp4",
+                thumbnail: "/thumbnails/BFER Ramen Trailer.png",
+                type: "cloudinary",
+                vertical: false
+            },
+            {
+                title: "(Fan Made) Napoleonic War Trailer",
+                description: "A fan-made trailer for the Battle of Austerlitz video in the execllent series on the Napoleonic wars by the historymarche Youtube channel, demonstrating my ability to create engaging promotional shortform content. I used the original footage and added my own twist to it.",
+                videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1748475936/Portfolio%20Porjects/Napoleon%20Trailer.mp4",
+                thumbnail: "/thumbnails/Napoleon Thumbnail.png",
+                type: "cloudinary",
+                vertical: false
             },
             {
                 title: "Jordan Reel",
                 description: "A dynamic reel on the legendary MJ. Showcasing my skills in fast-paced editing and storytelling. And how to use the right music to enhance the story.",
-                videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1748475771/Portfolio%20Porjects/Jordan%20Reel.mp4",
+                thumbnail: "/thumbnails/Jordan Thumbnail.jpg",
+                type: "cloudinary",
+                vertical: true
             },
             {
                 title: "Mealio Product Video",
                 description: "A clean modern demo video that highlights Mealio's feaatures with smooth transitions and a crisp look. Showcasing how I can turn a bunch of screenshots into a visual fast-paced story.",
-                videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1748475391/Portfolio%20Porjects/Mealio%20Demo.mp4",
+                thumbnail: "/thumbnails/Mealio Demo Thumbnail.png",
+                type: "cloudinary",
+                vertical: false
             }
         ]
     },

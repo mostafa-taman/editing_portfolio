@@ -2,6 +2,7 @@
 
 import { icons, socialMedia } from "@/constants";
 
+import type { SocialMedia } from "@/constants";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -14,9 +15,9 @@ const IconGrid: React.FC<IconGridProps> = ({ showMessage }) => {
     const { t } = useTranslation();
 
     const [copied, setCopied] = useState<string | null>(null);
-    const [selectedInfo, setSelectedInfo] = useState<null | { name: string; value: string; icon: any }>(null);
+    const [selectedInfo, setSelectedInfo] = useState<null | { name: string; value: string; icon: React.ComponentType<{ className?: string }> }>(null);
 
-    const handleGridClick = (entry: any) => {
+    const handleGridClick = (entry: SocialMedia) => {
         if (entry.type === "link") {
             window.open(entry.url, "_blank", "noopener,noreferrer");
         } else if (entry.type === "info" && entry.value) {
@@ -30,17 +31,15 @@ const IconGrid: React.FC<IconGridProps> = ({ showMessage }) => {
         setTimeout(() => setCopied(null), 1500);
     };
 
-
-
     return (
         <motion.div
             className="mt-8 flex flex-col justify-center gap-5"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, }}
+            transition={{ duration: 0.5 }}
         >
-            {
-                showMessage && <motion.p
+            {showMessage && (
+                <motion.p
                     className="text-sm  text-gray-600"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -48,7 +47,7 @@ const IconGrid: React.FC<IconGridProps> = ({ showMessage }) => {
                 >
                     {t("hero.hireMeMessage")}
                 </motion.p>
-            }
+            )}
 
             <div className="grid grid-cols-6 gap-4">
                 {socialMedia.map(({ name, icon: Icon, url, type, value }) => (
@@ -56,7 +55,15 @@ const IconGrid: React.FC<IconGridProps> = ({ showMessage }) => {
                         key={name}
                         type="button"
                         aria-label={name}
-                        onClick={() => handleGridClick({ name, icon: Icon, url, type, value })}
+                        onClick={() =>
+                            handleGridClick({
+                                name,
+                                icon: Icon,
+                                url,
+                                type: type as "link" | "info",
+                                value,
+                            })
+                        }
                         className={`
                             group
                             relative
@@ -114,7 +121,7 @@ const IconGrid: React.FC<IconGridProps> = ({ showMessage }) => {
                 </div>
             )}
         </motion.div>
-    )
-}
+    );
+};
 
-export default IconGrid
+export default IconGrid;

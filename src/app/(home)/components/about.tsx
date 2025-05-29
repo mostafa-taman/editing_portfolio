@@ -1,6 +1,5 @@
 "use client";
 
-import { Separator } from "@radix-ui/react-dropdown-menu";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
@@ -173,9 +172,6 @@ const About: React.FC = () => {
                         ))}
                     </div>
                 </motion.div>
-
-
-
             </div>
         </section>
     );

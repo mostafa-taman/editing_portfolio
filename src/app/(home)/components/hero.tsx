@@ -1,12 +1,10 @@
 "use client";
 
-import { icons, socialMedia } from "@/constants";
-
 import { Button } from "@/components/ui/button";
-import HeroImage from "@/assets/images/hero.svg";
+import CustomVideoPlayer from "@/components/video/customVideoPlayer";
 import IconGrid from "@/components/common/iconGrid";
-import Image from "next/image";
 import Link from "next/link";
+import { icons } from "@/constants";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -14,11 +12,21 @@ import { useTranslation } from "react-i18next";
 const Hero: React.FC = () => {
     const { t } = useTranslation();
     const [showGrid, setShowGrid] = useState(false);
+    const [showReelPlaying, setShowReelPlaying] = useState(false);
 
     const handleCTAClick = () => setShowGrid((prev) => !prev);
 
+    const showReel = t("hero.showReel", { returnObjects: true }) as {
+        title: string;
+        description: string;
+        videoUrl: string;
+        thumbnail: string;
+        type: string;
+        vertical?: boolean;
+    };
+
     return (
-        <section className="relative  pt-24 pb-32">
+        <section className="relative pt-24 pb-32">
             <div className="container mx-auto px-6 sm:px-12 max-w-7xl">
                 <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
                     <div className="text-center lg:text-left">
@@ -52,6 +60,8 @@ const Hero: React.FC = () => {
                             {" "}
                             <span>{t("hero.title")}</span>
                         </motion.h1>
+
+
 
                         <motion.p
                             className="mt-6 text-lg  text-gray-800 dark:text-gray-300 max-w-xl mx-auto lg:mx-0"
@@ -89,7 +99,7 @@ const Hero: React.FC = () => {
 
 
                     <motion.div
-                        className="relative hidden lg:flex justify-center items-center"
+                        className="relative lg:flex justify-center items-center"
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.7, delay: 0.3 }}
@@ -100,6 +110,7 @@ const Hero: React.FC = () => {
                                 -z-10
                                 w-[420px] h-[420px]
                                 rounded-full
+                                hidden
                                 blur-3xl
                                 bg-blue-400/40
                                 dark:bg-blue-700/40
@@ -108,12 +119,55 @@ const Hero: React.FC = () => {
                                 pointer-events-none
                             "
                         />
-                        <Image
-                            src={HeroImage}
-                            width={500}
-                            height={500}
-                            alt="hero image"
-                        />
+
+                        <motion.div
+                            className="mt-10 flex flex-col items-center"
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ duration: 0.7, delay: 0.2 }}
+                        >
+                            <motion.div>
+
+                                <div className="relative w-full max-w-xl aspect-video flex items-center justify-center group">
+                                    {/* Glowing border */}
+                                    <div className="absolute inset-0 z-0 rounded-2xl pointer-events-none bg-gradient-to-tr from-blue-400 via-cyan-400 to-purple-500 blur-[6px] opacity-70 animate-pulse" />
+
+                                    {/* Title on top of the video, full width, only on hover and not playing */}
+                                    <motion.div
+                                        className={`
+                                        absolute top-0 left-0 w-full z-20
+                                        transition-opacity duration-300
+                                        pointer-events-none
+                                        group-hover:opacity-100
+                                        opacity-0
+                                        px-0
+                                    `}
+                                        initial={false}
+                                        animate={{ opacity: !showReelPlaying ? 1 : 0 }}
+                                    >
+                                        <div className="w-full rounded-t-2xl bg-white/90 dark:bg-neutral-900/90 py-2 px-3 text-center">
+                                            <span className="block text-base md:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-cyan-500 to-purple-600 drop-shadow-sm">
+                                                {showReel.title}
+                                            </span>
+                                        </div>
+                                    </motion.div>
+
+                                    {/* Video player */}
+                                    <div className="relative z-10 w-full h-full rounded-2xl overflow-hidden">
+                                        <CustomVideoPlayer
+                                            url={showReel.videoUrl}
+                                            poster={showReel.thumbnail}
+                                            type={showReel.type}
+                                            vertical={showReel.vertical}
+                                            className={showReel.vertical ? "h-full w-auto mx-auto" : "w-full h-full"}
+                                            onPlay={() => setShowReelPlaying(true)}
+                                            onPause={() => setShowReelPlaying(false)}
+                                        />
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </motion.div>
                     </motion.div>
                 </div>
             </div>

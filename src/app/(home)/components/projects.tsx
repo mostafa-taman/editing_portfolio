@@ -1,5 +1,6 @@
 "use client";
 
+import CustomVideoPlayer from "@/components/video/customVideoPlayer";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
@@ -25,6 +26,9 @@ const Projects: React.FC = () => {
         title: string;
         description: string;
         videoUrl: string;
+        thumbnail: string;
+        type: "youtube" | "cloudinary";
+        vertical?: boolean;
     }>;
 
     // Always split into rows of 2
@@ -61,9 +65,10 @@ const Projects: React.FC = () => {
                             className={`
                                 grid gap-10
                                 grid-cols-2
-                                auto-rows-[22rem]
                                 md:grid-cols-2
                                 lg:grid-cols-4
+                                auto-rows-fr
+                                items-stretch
                             `}
                         >
                             {row.map((project, idx) => (
@@ -74,17 +79,16 @@ const Projects: React.FC = () => {
                                     whileInView="show"
                                     viewport={{ once: true, amount: 0.2 }}
                                     transition={{ duration: 0.5, delay: (rowIdx * 2 + idx) * 0.1 }}
-                                    className="relative group flex flex-col justify-end overflow-visible col-span-2"
+                                    className="relative group flex flex-col justify-end overflow-visible col-span-2 h-full"
                                 >
-                                    {/* Video */}
-                                    <div className="relative w-full h-3/4 rounded-3xl overflow-hidden shadow-2xl group">
-                                        <iframe
-                                            src={project.videoUrl}
-                                            title={project.title}
-                                            allow="autoplay; encrypted-media"
-                                            allowFullScreen
-                                            className="absolute inset-0 w-full h-full object-cover rounded-3xl border-none"
-                                            style={{ zIndex: 1, background: "rgba(0,0,0,0.7)" }}
+                                    {/* Custom Video Player */}
+                                    <div className={`relative rounded-3xl overflow-hidden shadow-2xl group ${project.vertical ? "h-90 flex justify-center items-center shadow-none" : "h-90"}`}>
+                                        <CustomVideoPlayer
+                                            url={project.videoUrl}
+                                            poster={project.thumbnail}
+                                            type={project.type}
+                                            vertical={project.vertical}
+                                            className={project.vertical ? "h-full w-auto mx-auto" : "w-full h-full"}
                                         />
                                         {/* Animated border accent on hover */}
                                         <motion.div
@@ -97,7 +101,7 @@ const Projects: React.FC = () => {
                                         </motion.div>
                                     </div>
                                     {/* Info section under the video */}
-                                    <div className="w-full mt-4 px-4 py-3 rounded-2xl bg-white/80 dark:bg-neutral-900/80 border border-blue-100 dark:border-neutral-800 shadow flex flex-col gap-1">
+                                    <div className="w-full mt-4 px-4 py-3 rounded-2xl bg-white/80 dark:bg-neutral-900/80 shadow flex flex-col gap-1">
                                         <span className="font-bold text-base text-blue-700 dark:text-blue-500">{project.title}</span>
                                         <span className="text-xs text-gray-600 dark:text-gray-300">{project.description}</span>
                                     </div>

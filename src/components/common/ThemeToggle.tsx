@@ -1,11 +1,10 @@
 "use client";
 
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 import { Button } from "@/components/ui/button";
 import { themes } from "@/constants";
 import { useTheme } from "next-themes";
-import { useTranslation } from "react-i18next";
 
 interface ThemeTogglerButtonProps {
     className?: string;
@@ -14,7 +13,6 @@ interface ThemeTogglerButtonProps {
 }
 
 const ThemeTogglerButton: React.FC<ThemeTogglerButtonProps> = ({ size, variant }) => {
-    const { t } = useTranslation();
     const { setTheme, theme } = useTheme();
 
     const currentTheme = themes.find(t => t.value === theme) || themes[0];

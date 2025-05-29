@@ -94,24 +94,26 @@ export const themes = [
 ];
 
 
+
 export const socialMedia = [
     {
         name: "Discord",
         icon: icons.DiscordIcon,
         url: "https://www.discord.com",
-        type: "link"
+        type: "info",
+        value: "mostafa.taman#0"
     },
     {
         name: "WhatsApp",
         icon: icons.WhatsAppIcon,
         url: "https://www.whatsapp.com",
         type: "info",
-        value: "01018065656"
+        value: "+20 01553995798"
     },
     {
         name: "LinkedIn",
         icon: icons.LinkedInIcon,
-        url: "https://www.linkedin.com/in/yourprofile",
+        url: "https://www.linkedin.com/in/mostafa-taman-2353b0248",
         type: "link"
     },
     {
@@ -119,13 +121,14 @@ export const socialMedia = [
         icon: icons.TelegramIcon,
         url: "https://telegarm.com/yourprofile",
         type: "info",
-        value: "01018065656"
+        value: "+20 01553995798"
     },
     {
         name: "Reddit",
         icon: icons.RedditIcon,
         url: "https://www.reddit.com/user/yourusername",
-        type: "link"
+        type: "info",
+        value: "u/jupitor9"
     },
     {
         name: "Email",
@@ -135,3 +138,13 @@ export const socialMedia = [
         value: "mostafa.taman.me@gmail.com"
     },
 ];
+
+export type SocialMedia = {
+    name: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    icon: React.ComponentType<any>;
+    url: string;
+    type: "link" | "info";
+    value?: string;
+};
+

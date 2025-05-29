@@ -21,7 +21,6 @@ i18n
             order: ["querystring", "cookie", "localStorage", "navigator", "htmlTag"],
             caches: ["cookie", "localStorage"],
         },
-        debug: true,
         interpolation: {
             escapeValue: false
         }
