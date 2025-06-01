@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 const btnBase =
     "w-8 h-8 flex items-center justify-center rounded-full hover:bg-neutral-700 transition";
 
-interface CustomVideoPlayerProps {
+interface CustomVideoPlayerProps extends React.HTMLAttributes<HTMLVideoElement> {
     url: string;
     poster?: string;
     className?: string;
@@ -142,7 +142,7 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({
     return (
         <div
             className={`relative bg-black rounded-2xl overflow-hidden shadow-lg ${className}`}
-            style={{ aspectRatio }}
+            style={{ aspectRatio, minHeight: 150 }}
         >
             <video
                 ref={videoRef}
@@ -180,9 +180,7 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({
                     }}
                 />
 
-                <div
-                    className={`flex items-center gap-2 ${vertical ? "flex-col gap-1" : ""}`}
-                >
+                <div className={`flex items-center gap-2 ${vertical ? "sm:flex-col sm:gap-1" : ""}`}>
                     {/* Play/Pause */}
                     <button
                         onClick={togglePlay}

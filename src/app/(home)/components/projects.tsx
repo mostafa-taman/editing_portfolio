@@ -82,13 +82,17 @@ const Projects: React.FC = () => {
                                     className="relative group flex flex-col justify-end overflow-visible col-span-2 h-full"
                                 >
                                     {/* Custom Video Player */}
-                                    <div className={`relative rounded-3xl overflow-hidden shadow-2xl group ${project.vertical ? "h-90 flex justify-center items-center shadow-none" : "h-90"}`}>
+                                    <div
+                                        className={`relative aspect-video rounded-3xl overflow-hidden shadow-2xl group w-full
+        ${project.vertical ? "flex justify-center items-center shadow-none h-full" : ""}
+    `}
+                                    >
                                         <CustomVideoPlayer
                                             url={project.videoUrl}
                                             poster={project.thumbnail}
                                             type={project.type}
                                             vertical={project.vertical}
-                                            className={project.vertical ? "h-full w-auto mx-auto" : "w-full h-full"}
+                                            className={project.vertical ? "w-full h-full sm:h-full sm:w-auto sm:mx-auto" : "w-full h-full"}
                                         />
                                         {/* Animated border accent on hover */}
                                         <motion.div

@@ -154,7 +154,7 @@ const Hero: React.FC = () => {
                                     </motion.div>
 
                                     {/* Video player */}
-                                    <div className="relative z-10 w-full h-full rounded-2xl overflow-hidden">
+                                    <div className="relative w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl aspect-video flex items-center justify-center group">
                                         <CustomVideoPlayer
                                             url={showReel.videoUrl}
                                             poster={showReel.thumbnail}
