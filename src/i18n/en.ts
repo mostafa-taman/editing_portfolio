@@ -60,6 +60,14 @@ export const en = {
         description: "Chek out all my porjects so far, new items are added regularly",
         videos: [
             {
+                title: "Luciano, The Real Godfather",
+                description: "A teaser for a full documentary about the legendary gangster Lucky Luciano. All the graphics, voice over, sound design, script writing and asset collection was done by me from scratch.",
+                videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1751440326/Portfolio%20Porjects/Luciano_teaser.mp4",
+                thumbnail: "/thumbnails/Luciano Teaser Thumbnail.png",
+                type: "cloudinary",
+                vertical: false
+            },
+            {
                 title: "Color Language",
                 description: "A visual exploration of color theory and its impact on storytelling. Showcasing my understading of color theory and color grading.",
                 videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1748491759/Portfolio%20Porjects/Color%20Language.mp4",
@@ -69,7 +77,7 @@ export const en = {
             },
             {
                 title: "(Fake) Thunder AD",
-                description: "A creative advertisement for a fictional product, showcasing my skills in commercial video editing. I challenged myself by using only free stock footage and designing the logo myself. ",
+                description: "A creative advertisement for a fictional energy drink (thunder) created by me, showcasing my skills in commercial video editing. I challenged myself by using only free stock footage and designing the logo myself. ",
                 videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1748475921/Portfolio%20Porjects/Thunder%20AD.mp4",
                 thumbnail: "/thumbnails/Thunder AD Thumbnail.png",
                 type: "cloudinary",
