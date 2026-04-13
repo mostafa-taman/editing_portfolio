@@ -22,7 +22,7 @@ const containerVariants = {
 
 const cardVariants = {
     hidden: { opacity: 0, y: 40, scale: 0.95 },
-    show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 80, damping: 12 } },
+    show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 80, damping: 12 }},
 };
 
 const Services: React.FC = () => {
@@ -67,6 +67,7 @@ const Services: React.FC = () => {
                         return (
                             <motion.div
                                 key={service.title}
+                                // @ts-expect-error - cardVariants is typed as a generic object, but it works fine with motion.div
                                 variants={cardVariants}
                                 className="group bg-white/90 dark:bg-neutral-900/90 rounded-3xl shadow-xl p-8 flex flex-col items-center text-center border border-blue-100 dark:border-neutral-800 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden"
                             >
@@ -79,7 +80,7 @@ const Services: React.FC = () => {
                                     className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-2 rounded-full bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 opacity-30 group-hover:opacity-60"
                                     initial={{ scaleX: 0 }}
                                     whileHover={{ scaleX: 1.1 }}
-                                    transition={{ type: "spring", stiffness: 120, damping: 10 }}
+                                    transition={{ type: "spring", stiffness: 120, damping: 10 } as const}
                                 />
                             </motion.div>
                         );

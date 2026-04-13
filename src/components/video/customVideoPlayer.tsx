@@ -140,7 +140,8 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({
                 if (parsed.pathname.startsWith("/embed/")) {
                     return `https://www.youtube.com${parsed.pathname}`;
                 }
-            } catch (e) {
+            } catch  {
+                return "failed to reutrn original URL";
                 // fallthrough to return original URL
             }
             return u;
