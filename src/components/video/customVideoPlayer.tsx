@@ -123,15 +123,39 @@ const CustomVideoPlayer: React.FC<CustomVideoPlayerProps> = ({
     };
 
 
-    // If YouTube, just render iframe with native controls and correct aspect ratio
+    // If YouTube, convert to an embed URL and render iframe with proper allow flags
     if (type === "youtube") {
+        const getYouTubeEmbed = (u: string) => {
+            try {
+                // youtu.be/ID
+                if (u.includes("youtu.be/")) {
+                    return `https://www.youtube.com/embed/${u.split("youtu.be/")[1].split(/[?&]/)[0]}`;
+                }
+                const parsed = new URL(u);
+                // watch?v=ID
+                if (parsed.searchParams.get("v")) {
+                    return `https://www.youtube.com/embed/${parsed.searchParams.get("v")}`;
+                }
+                // already an embed path
+                if (parsed.pathname.startsWith("/embed/")) {
+                    return `https://www.youtube.com${parsed.pathname}`;
+                }
+            } catch (e) {
+                // fallthrough to return original URL
+            }
+            return u;
+        };
+
+        const embedUrl = getYouTubeEmbed(url);
+
         return (
             <div className={`relative bg-black rounded-2xl overflow-hidden shadow-lg ${className}`} style={{ aspectRatio }}>
                 <iframe
-                    src={url}
+                    src={embedUrl}
                     title="YouTube video"
-                    allow="autoplay; encrypted-media"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
+                    loading="lazy"
                     className="w-full h-full rounded-2xl"
                     style={{ border: "none", aspectRatio }}
                 />

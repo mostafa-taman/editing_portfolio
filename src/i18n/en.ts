@@ -59,17 +59,25 @@ export const en = {
         title: "What have I Built?",
         description: "Chek out all my porjects so far, new items are added regularly",
         videos: [
+            // {
+            //     title: "Lucky Luciano Teaser",
+            //     description: "A teaser for a full documentary about the legendary gangster Lucky Luciano. All the graphics, voice over, sound design, script writing and asset collection was done by me from scratch.",
+            //     videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1776109436/Portfolio%20Porjects/totwowmdk0m29lzgjnpc.mp4",
+            //     thumbnail: "/thumbnails/Luciano thumbnail v4.5.png",
+            //     type: "cloudinary",
+            //     vertical: false
+            // },
             {
-                title: "Luciano, The Real Godfather",
-                description: "A teaser for a full documentary about the legendary gangster Lucky Luciano. All the graphics, voice over, sound design, script writing and asset collection was done by me from scratch.",
-                videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1751440326/Portfolio%20Porjects/Luciano_teaser.mp4",
-                thumbnail: "/thumbnails/Luciano Teaser Thumbnail.png",
-                type: "cloudinary",
+                title: "Lucky Luciano: Born Lucky | The Real Godfather",
+                description: "The first installment of a trilogy documentary series exploring the rise and fall of the man who put organized in organized crime, Lucky Luciano. All the graphics, voice over, sound design, script writing and asset collection was done by me from scratch.",
+                videoUrl: "https://youtu.be/NmhAzlM7nyU",
+                thumbnail: "/thumbnails/Luciano thumbnail v4.5.png",
+                type: "youtube",
                 vertical: false
             },
             {
                 title: "Color Language",
-                description: "A visual exploration of color theory and its impact on storytelling. Showcasing my understading of color theory and color grading.",
+                description: "A visual exploration of color theory and its impact on storytelling. Showcasing my understading of color theory and color grading using industry standard tools like DaVinci Resolve",
                 videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1748491759/Portfolio%20Porjects/Color%20Language.mp4",
                 thumbnail: "/thumbnails/Color Language Thumbnail.png",
                 type: "cloudinary",
@@ -77,7 +85,7 @@ export const en = {
             },
             {
                 title: "(Fake) Thunder AD",
-                description: "A creative advertisement for a fictional energy drink (thunder) created by me, showcasing my skills in commercial video editing. I challenged myself by using only free stock footage and designing the logo myself. ",
+                description: "A creative advertisement for a fictional energy drink (thunder) created by me, showcasing my skills in commercial video editing. I challenged myself by using only free stock footage. This project demonstrates my ability to create engaging promotional content with limited resources and a tight deadline.",
                 videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1748475921/Portfolio%20Porjects/Thunder%20AD.mp4",
                 thumbnail: "/thumbnails/Thunder AD Thumbnail.png",
                 type: "cloudinary",

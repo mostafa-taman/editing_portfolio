@@ -1,12 +1,14 @@
 "use client";
 
 import CustomVideoPlayer from "@/components/video/customVideoPlayer";
-import { motion } from "framer-motion";
+import { motion, Variants, Transition } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-const cardVariants = {
+const springTransition: Transition = { type: "spring", stiffness: 90, damping: 14 };
+
+const cardVariants: Variants = {
     hidden: { opacity: 0, y: 40, scale: 0.97 },
-    show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 90, damping: 14 } },
+    show: { opacity: 1, y: 0, scale: 1, transition: springTransition },
 };
 
 function chunkProjects<T>(arr: T[], size: number) {
