@@ -10,7 +10,7 @@ export const en = {
     hero: {
         titleSpan: "Mostafa",
         title: "Taman",
-        description: "Transforming ideas into standout visuals—bespoke, innovative, and polished edits tailored for your brand and personal vision.",
+        description: "Transforming ideas into standout visuals, innovative, and polished edits tailored for your brand and personal vision.",
         cta: "Hire Me",
         banner: {
             title: "A picture is worth 1000 words",
@@ -20,7 +20,7 @@ export const en = {
         showReel: {
             title: "Showreel",
             description: "A curated selection of my best work, showcasing my skills in video editing and storytelling.",
-            videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1748492545/Portfolio%20Porjects/Showreel.mp4",
+            videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1776670698/Portfolio%20Porjects/kczv0oupbcw9bbsgn2da.mp4",
             thumbnail: "/thumbnails/Show Reel Thumbnail.png",
             type: "cloudinary",
             vertical: false
