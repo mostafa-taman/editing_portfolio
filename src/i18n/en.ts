@@ -59,20 +59,21 @@ export const en = {
         title: "What have I Built?",
         description: "Chek out all my porjects so far, new items are added regularly",
         videos: [
-            // {
-            //     title: "Lucky Luciano Teaser",
-            //     description: "A teaser for a full documentary about the legendary gangster Lucky Luciano. All the graphics, voice over, sound design, script writing and asset collection was done by me from scratch.",
-            //     videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1776109436/Portfolio%20Porjects/totwowmdk0m29lzgjnpc.mp4",
-            //     thumbnail: "/thumbnails/Luciano thumbnail v4.5.png",
-            //     type: "cloudinary",
-            //     vertical: false
-            // },
             {
                 title: "Lucky Luciano: Born Lucky | The Real Godfather",
                 description: "The first installment of a trilogy documentary series exploring the rise and fall of the man who put organized in organized crime, Lucky Luciano. All the graphics, voice over, sound design, script writing and asset collection was done by me from scratch.",
                 videoUrl: "https://youtu.be/NmhAzlM7nyU",
                 thumbnail: "/thumbnails/Luciano thumbnail v4.5.png",
                 type: "youtube",
+                vertical: false
+            },
+            {
+                title: "YouTube Video Edit – Motion Graphics & Storytelling Sample",
+                description: "This is a 1-minute talking head edit created as part of a client trial, focused on high retention YouTube storytelling. This \
+                 reflects my ability to take raw footage and transform it into an engaging, YouTube ready video.",
+                videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1777310886/Portfolio%20Porjects/gqmjosasvgk71pe78xvx.mp4",
+                thumbnail: "/thumbnails/Mike&Matty thumbnail.png",
+                type: "cloudinary",
                 vertical: false
             },
             {
@@ -85,7 +86,7 @@ export const en = {
             },
             {
                 title: "(Fake) Thunder AD",
-                description: "A creative advertisement for a fictional energy drink (thunder) created by me, showcasing my skills in commercial video editing. I challenged myself by using only free stock footage. This project demonstrates my ability to create engaging promotional content with limited resources and a tight deadline.",
+                description: "A creative advertisement for a fictional energy drink (thunder) created by me. I challenged myself by using only free stock footage. This project demonstrates my ability to create engaging promotional content with limited resources and a tight deadline.",
                 videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1748475921/Portfolio%20Porjects/Thunder%20AD.mp4",
                 thumbnail: "/thumbnails/Thunder AD Thumbnail.png",
                 type: "cloudinary",
@@ -93,7 +94,7 @@ export const en = {
             },
             {
                 title: "(Fan Made) Best Ever Food Review Ramen Trailer",
-                description: "A fan-made trailer for the popular YouTube channel Best ever food review show, their content is alreadt enganging and entertaining on its own but I manage to compress one of their video to a minute long trailer. I used the original footage and added my own twist to it.",
+                description: "A fan made trailer for the popular YouTube channel Best ever food review show, their content is already enganging and entertaining on its own but I manage to compress one of their video to a minute long trailer.",
                 videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1748475963/Portfolio%20Porjects/Ramen%20Trailer.mp4",
                 thumbnail: "/thumbnails/BFER Ramen Trailer.png",
                 type: "cloudinary",
@@ -101,7 +102,7 @@ export const en = {
             },
             {
                 title: "(Fan Made) Napoleonic War Trailer",
-                description: "A fan-made trailer for the Battle of Austerlitz video in the execllent series on the Napoleonic wars by the historymarche Youtube channel, demonstrating my ability to create engaging promotional shortform content. I used the original footage and added my own twist to it.",
+                description: "A fan made trailer for the Battle of Austerlitz video in the execllent series on the Napoleonic wars by the historymarche Youtube channel, demonstrating my ability to create engaging promotional shortform content.",
                 videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1748475936/Portfolio%20Porjects/Napoleon%20Trailer.mp4",
                 thumbnail: "/thumbnails/Napoleon Thumbnail.png",
                 type: "cloudinary",
