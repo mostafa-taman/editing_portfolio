@@ -67,15 +67,15 @@ export const en = {
                 type: "youtube",
                 vertical: false
             },
-            {
-                title: "YouTube Video Edit – Motion Graphics & Storytelling Sample",
-                description: "This is a 1-minute talking head edit created as part of a client trial, focused on high retention YouTube storytelling. This \
-                 reflects my ability to take raw footage and transform it into an engaging, YouTube ready video.",
-                videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1777310886/Portfolio%20Porjects/gqmjosasvgk71pe78xvx.mp4",
-                thumbnail: "/thumbnails/Mike&Matty thumbnail.png",
-                type: "cloudinary",
-                vertical: false
-            },
+            // {
+            //     title: "YouTube Video Edit – Motion Graphics & Storytelling Sample",
+            //     description: "This is a 1-minute talking head edit created as part of a client trial, focused on high retention YouTube storytelling. This \
+            //      reflects my ability to take raw footage and transform it into an engaging, YouTube ready video.",
+            //     videoUrl: "https://res.cloudinary.com/dbsb57eoo/video/upload/v1777310886/Portfolio%20Porjects/gqmjosasvgk71pe78xvx.mp4",
+            //     thumbnail: "/thumbnails/Mike&Matty thumbnail.png",
+            //     type: "cloudinary",
+            //     vertical: false
+            // },
             {
                 title: "Color Language",
                 description: "A visual exploration of color theory and its impact on storytelling. Showcasing my understading of color theory and color grading using industry standard tools like DaVinci Resolve",
